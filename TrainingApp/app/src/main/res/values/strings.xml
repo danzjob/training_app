@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Training App</string>
-    <string name="title_exercise">Exercise</string>
-    <string name="title_relax">Relax</string>
+
+    <!--Titles-->
+    <string name="exercises_title">Exercises</string>
+    <string name="number_of_approaches">Number of approaches</string>
+    <string name="number_of_repeats">Number of repeats</string>
+    <string name="relax_title">Relax</string>
+    <!--End Titles-->
+
+    <!--Exercises names-->
+    <string name="running">Running</string>
+    <string name="jumping_rope">Jumping rope</string>
+    <string name="dumbbells_swings">Dumblebells swings</string>
+    <!--End Exercises names-->
+
 </resources>
