@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Training App</string>
+    <string name="dumbbells_swings">Махи гантелями</string>
+    <string name="exercises_title">Упражнения</string>
+    <string name="jumping_rope">Прыжки на скакалке</string>
+    <string name="number_of_approaches">Количество подходов</string>
+    <string name="number_of_repeats">Количество повторений</string>
+    <string name="relax_title">Отдых</string>
+    <string name="running">Бег</string>
+</resources>
