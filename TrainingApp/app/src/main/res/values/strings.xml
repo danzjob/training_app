@@ -12,13 +12,13 @@
     <!--Exercises names-->
     <string name="running">Running</string>
     <string name="jumping_rope">Jumping rope</string>
-    <string name="dumbbells_swings">Dumblebells swings</string>
+    <string name="dumbbell_swings">Dumbbells swings</string>
     <!--End Exercises names-->
 
     <!--Descriptions-->
     <string name="running_description">Descrription of running - how to run right way!</string>
     <string name="jumping_rope_description">Descrription of jumping rope - how to jump right way!</string>
-    <string name="dumbbells_swings_description">Descrription of dumbbells swings - how to swing right way!</string>
+    <string name="dumbbell_swings_description">Descrription of dumbbells swings - how to swing right way!</string>
     <!--End Descriptions-->
 
 
