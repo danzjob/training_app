@@ -3,6 +3,8 @@
 
     <!--Common-->
     <string name="go_to_exercise">Go to exercise</string>
+    <string name="href_button">Click to view full description on the site</string>
+    <string name="app_chooser">Select app</string>
     <!--End Common-->
 
     <!--Titles-->
@@ -23,6 +25,7 @@
     <string name="running_description">Descrription of running - how to run right way!</string>
     <string name="jumping_rope_description">Descrription of jumping rope - how to jump right way!</string>
     <string name="dumbbell_swings_description">Descrription of dumbbells swings - how to swing right way!</string>
+    <string name="chrome_browser_needed">Sorry, but you need Chrome Browser installed to view this page</string>
     <!--End Descriptions-->
 
 
