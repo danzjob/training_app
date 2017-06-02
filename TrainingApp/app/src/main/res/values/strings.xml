@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">Training App</string>
 
+    <!--Common-->
+    <string name="go_to_exercise">Go to exercise</string>
+    <!--End Common-->
+
     <!--Titles-->
     <string name="exercises_title">Exercises</string>
     <string name="number_of_approaches">Number of approaches</string>
-    <string name="number_of_repeats">Number of repeats</string>
+    <string name="number_of_repeats">Number of repeats: </string>
     <string name="relax_title">Relax</string>
     <!--End Titles-->
 

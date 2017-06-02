@@ -1,10 +1,12 @@
 package ru.matbrain.trainingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ import static ru.matbrain.trainingapp.R.id.running_card_view;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    public static final String JUMPING_ROPE_KEY = "JUMPING_ROPE_COUNT_KEY";
+    public static final int JUMPING_ROPE_REQUEST_CODE = 100;
 
     private CardView runningCV;
     private CardView jumping_ropeCV;
@@ -36,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView jumpingRopeDescriptionTV;
     private TextView dumbbellSwingsDescriptionTV;
 
+    private TextView jumpingRopeCountTV;
+
+    private Button goToExerciseJumpingRope;
+
+    private int jumpingRopeCount = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
         setRunningClickBehavior();
         setJumpingRopeClickBehavior();
         setDumbbellSwingsClickBehavior();
+        setJumpingRopeGoToExerciseBehavior();
+
+        jumpingRopeSetLastRepeatCount();
+    }
+
+    private void jumpingRopeSetLastRepeatCount() {
+        String jumpingRopeRepeatCount = getResources().getString(R.string.number_of_repeats);
+        jumpingRopeRepeatCount += " " + jumpingRopeCount;
+        jumpingRopeCountTV.setText(jumpingRopeRepeatCount);
     }
 
     private void initUI(){
@@ -60,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
         jumpingRopeDescriptionTV = (TextView) findViewById(jumping_rope_description_text_view);
         dumbbellSwingsDescriptionTV = (TextView) findViewById(dumbbell_swings_description_text_view);
 
+        jumpingRopeCountTV = (TextView) findViewById(R.id.jumping_rope_number_of_repeats);
+
+        goToExerciseJumpingRope = (Button) findViewById(R.id.go_to_exercise_jumping_rope);
 
         runningDescriptionCV.setVisibility(GONE);
         jumpingRopeDescriptionCV.setVisibility(GONE);
@@ -128,4 +150,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setJumpingRopeGoToExerciseBehavior(){
+        goToExerciseJumpingRope.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), JumpingRopeActivity.class);
+                intent.putExtra(JUMPING_ROPE_KEY, jumpingRopeCount);
+                startActivityForResult(intent, JUMPING_ROPE_REQUEST_CODE);
+
+//                startActivity(intent);
+
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == JUMPING_ROPE_REQUEST_CODE && resultCode == RESULT_OK && data != null){
+            jumpingRopeCount = data.getIntExtra(JUMPING_ROPE_KEY, 0);
+            jumpingRopeSetLastRepeatCount();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
