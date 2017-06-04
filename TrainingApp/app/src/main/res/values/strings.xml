@@ -26,6 +26,8 @@
     <string name="jumping_rope_description">Descrription of jumping rope - how to jump right way!</string>
     <string name="dumbbell_swings_description">Descrription of dumbbells swings - how to swing right way!</string>
     <string name="chrome_browser_needed">Sorry, but you need Chrome Browser installed to view this page</string>
+    <string name="exercise_done">Exercise done</string>
+    <string name="button_reset_timer">Reset</string>
     <!--End Descriptions-->
 
 
